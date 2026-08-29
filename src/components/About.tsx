@@ -172,7 +172,7 @@ export default function About() {
                     <div className="mt-2 flex flex-wrap gap-2">
                       <span className="rounded-md bg-white px-2.5 py-1 text-[11px] font-semibold text-ink/70 ring-1 ring-line/60">{ed.degree}</span>
                       <span className="rounded-md bg-white px-2.5 py-1 text-[11px] font-semibold text-ink/70 ring-1 ring-line/60">{ed.expected}</span>
-                      <span className="rounded-md bg-sand/40 px-2.5 py-1 text-[11px] font-bold text-ink ring-1 ring-sand/40">CGPA {ed.cgpa}</span>
+                      <span className="rounded-md bg-sand/40 px-2.5 py-1 text-[11px] font-bold text-ink ring-1 ring-sand/40">{/[A-Za-z]/.test(ed.cgpa) ? `Grade ${ed.cgpa}` : `CGPA ${ed.cgpa}`}</span>
                     </div>
                   </div>
                 ))}
