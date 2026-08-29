@@ -155,7 +155,7 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
               Supabase isn't configured yet — set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY (see .env.example and README.md) before you can sign in.
             </p>
           ) : (
-            <p className="mt-2 text-[12px] text-ink/60">Sign in with the admin account you created in Supabase Authentication.</p>
+            <p className="mt-2 text-[12px] text-ink/60">Sign in with your admin account and password.</p>
           )}
           <input
             type="email"
