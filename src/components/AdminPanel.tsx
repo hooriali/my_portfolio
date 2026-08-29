@@ -495,7 +495,7 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
                       }}
                     />
                     <Field
-                      label="CGPA"
+                      label="CGPA/Grade"
                       value={ed.cgpa}
                       onChange={(v) => {
                         const next = [...draftContent.education];
