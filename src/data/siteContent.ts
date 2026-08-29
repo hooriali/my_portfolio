@@ -64,7 +64,7 @@ export const defaultSiteContent: SiteContent = {
     linkedinUrl: "https://www.linkedin.com/in/hooria-ali7",
     linkedinHandle: "linkedin.com/in/hooria-ali7",
     websiteUrl: "#",
-    websiteLabel: "yourportfolio.dev",
+    websiteLabel: "Live Portfolio",
     location: "Karachi, Pakistan",
   },
   skills: {
