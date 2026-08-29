@@ -9,9 +9,6 @@ const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
 // never appear here or anywhere in the frontend bundle.
 export const supabaseConfigured = Boolean(url && anonKey);
 
-console.log("[Supabase] URL:", url);
-console.log("[Supabase] Configured:", supabaseConfigured);
-
 if (!supabaseConfigured) {
   // Don't throw — this lets the app still render (with a clear "not
   // configured" state, see ContentContext) instead of a blank white screen
