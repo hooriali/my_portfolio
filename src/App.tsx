@@ -37,7 +37,7 @@ function Page() {
   const open = useCallback((id: number) => {
     setSelectedId(id);
   }, []);
-
+//
   const next = useCallback(() => {
     setSelectedId((cur) => {
       if (cur === null || projects.length === 0) return projects[0]?.id ?? null;
