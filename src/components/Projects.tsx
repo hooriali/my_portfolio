@@ -45,7 +45,7 @@ export default function Projects({ onOpen }: { onOpen: (id: number) => void }) {
                 <span
                   className="relative font-display text-[5.5rem] font-extrabold leading-[0.8] text-white drop-shadow-sm"
                 >
-                  {p.id}
+                  {i + 1}
                 </span>
 
                 <span className="absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-white/20 text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
