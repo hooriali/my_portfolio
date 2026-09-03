@@ -32,7 +32,7 @@ export default function ContentTOC({ onOpen }: { onOpen: (id: number) => void })
               title={`Open ${p.name}`}
               className={`group absolute z-10 font-display text-2xl font-bold text-sand transition-all duration-300 hover:scale-125 hover:text-sand-deep sm:text-4xl ${spots[i % spots.length]}`}
             >
-              <span className="drop-shadow-sm">0{p.id}</span>
+              <span className="drop-shadow-sm">0{i + 1}</span>
               <span className="absolute -bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-ink px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest text-paper opacity-0 transition-opacity group-hover:opacity-100">
                 {p.name}
               </span>
