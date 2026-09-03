@@ -4,12 +4,14 @@ import type { Project } from "@/data/projects";
 
 interface Props {
   project: Project;
+  index: number;
   total: number;
   onClose: () => void;
   onNext: () => void;
 }
 
 export default function ProjectModal({ project, total, onClose, onNext }: Props) {
+  // (add index to the destructure)
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     document.addEventListener("keydown", onKey);
@@ -35,7 +37,7 @@ export default function ProjectModal({ project, total, onClose, onNext }: Props)
         {/* header */}
         <div className="relative overflow-hidden p-6 text-white sm:p-8" style={{ background: project.color }}>
           <span className="pointer-events-none absolute -right-2 -top-10 font-display text-[150px] font-extrabold leading-none text-white/15">
-            {project.id}
+            {index + 1}
           </span>
           <button
             onClick={onClose}
@@ -45,7 +47,7 @@ export default function ProjectModal({ project, total, onClose, onNext }: Props)
             <X size={16} />
           </button>
           <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/80">
-            Case 0{project.id} — {project.year}
+            Case 0{index + 1} — {project.year}
           </p>
           <h3 className="mt-2 font-display text-3xl font-extrabold sm:text-4xl">{project.name}</h3>
           <p className="mt-1 max-w-md text-sm font-semibold text-white/85">{project.tag}</p>
@@ -106,7 +108,7 @@ export default function ProjectModal({ project, total, onClose, onNext }: Props)
           </ul>
 
           <div className="mt-8 flex items-center justify-between border-t border-line pt-5">
-            <p className="text-[11px] font-semibold text-ink/40">0{project.id} / 0{total}</p>
+            <p className="text-[11px] font-semibold text-ink/40">0{index + 1} / 0{total}</p>
             <button
               onClick={onNext}
               className="group inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-paper transition-colors hover:bg-sand-deep"
