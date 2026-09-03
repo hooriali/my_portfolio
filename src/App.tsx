@@ -60,7 +60,7 @@ function Page() {
         <Projects onOpen={open} />
       </main>
       <Footer />
-      {selected && <ProjectModal project={selected} index={selectedIndex} total={projects.length} onClose={...} onNext={next} />}
+      {selected && <ProjectModal project={selected} index={selectedIndex} total={projects.length} onClose={() => setSelectedId(null)} onNext={next} />}
       {adminOpen && <AdminPanel onClose={() => setAdminOpen(false)} />}
     </div>
   );
