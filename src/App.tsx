@@ -47,6 +47,7 @@ function Page() {
   }, [projects]);
 
   const selected = projects.find((p) => p.id === selectedId) ?? null;
+  const selectedIndex = projects.findIndex((p) => p.id === selectedId);
 
   return (
     <div className="relative">
@@ -59,7 +60,7 @@ function Page() {
         <Projects onOpen={open} />
       </main>
       <Footer />
-      {selected && <ProjectModal project={selected} total={projects.length} onClose={() => setSelectedId(null)} onNext={next} />}
+      {selected && <ProjectModal project={selected} index={selectedIndex} total={projects.length} onClose={...} onNext={next} />}
       {adminOpen && <AdminPanel onClose={() => setAdminOpen(false)} />}
     </div>
   );
