@@ -54,7 +54,7 @@ export default function ProjectModal({ project, index, total, onClose, onNext }:
           {(project.github || project.demo) && (
             <div className="relative mt-4 flex flex-wrap gap-2.5">
               {project.github && (
-                
+                <a
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
@@ -65,7 +65,7 @@ export default function ProjectModal({ project, index, total, onClose, onNext }:
                 </a>
               )}
               {project.demo && (
-                
+                <a
                   href={project.demo}
                   target="_blank"
                   rel="noreferrer"
