@@ -10,8 +10,7 @@ interface Props {
   onNext: () => void;
 }
 
-export default function ProjectModal({ project, total, onClose, onNext }: Props) {
-  // (add index to the destructure)
+export default function ProjectModal({ project, index, total, onClose, onNext }: Props) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     document.addEventListener("keydown", onKey);
@@ -55,7 +54,7 @@ export default function ProjectModal({ project, total, onClose, onNext }: Props)
           {(project.github || project.demo) && (
             <div className="relative mt-4 flex flex-wrap gap-2.5">
               {project.github && (
-                <a
+                
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
@@ -66,7 +65,7 @@ export default function ProjectModal({ project, total, onClose, onNext }: Props)
                 </a>
               )}
               {project.demo && (
-                <a
+                
                   href={project.demo}
                   target="_blank"
                   rel="noreferrer"
