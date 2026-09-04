@@ -525,7 +525,7 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
               {draftProjects.map((p, i) => (
                 <div key={p.id} className="rounded-lg border border-line p-4">
                   <div className="flex items-start justify-between gap-2">
-                    <p className="text-[11px] font-extrabold uppercase tracking-widest text-sand-deep">Project 0{p.id}</p>
+                    <p className="text-[11px] font-extrabold uppercase tracking-widest text-sand-deep">Project 0{i + 1}</p>
                     <div className="flex items-center gap-3">
                       <label className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-ink/50">
                         <input
